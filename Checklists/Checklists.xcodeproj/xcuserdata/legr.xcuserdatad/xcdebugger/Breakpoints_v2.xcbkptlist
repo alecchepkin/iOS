@@ -16,22 +16,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Checklists/AllListsViewController.swift"
-            timestampString = "469734839.67396"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -50,7 +34,7 @@
                   moduleName = "Checklists"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/legr/Developer/iOS%20Testing/Checklists/Checklists/ListDetailViewController.swift"
-                  timestampString = "469734840.689633"
+                  timestampString = "469891424.133625"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -65,7 +49,7 @@
                   moduleName = "Checklists"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/legr/Developer/iOS%20Testing/Checklists/Checklists/ListDetailViewController.swift"
-                  timestampString = "469734840.690307"
+                  timestampString = "469891424.134299"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -80,7 +64,7 @@
                   moduleName = "Checklists"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/legr/Developer/iOS%20Testing/Checklists/Checklists/ListDetailViewController.swift"
-                  timestampString = "469734840.690638"
+                  timestampString = "469891424.134705"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
