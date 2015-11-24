@@ -5,7 +5,7 @@ protocol TypePickerViewControllerDelegate: class {
 }
 
 class TypePickerViewController: UITableViewController {
-    weak var delegate: TypePickerViewControllerDelegate?
+    weak var delegate: ListDetailViewController?
     
     let types = [
         "Checklist",

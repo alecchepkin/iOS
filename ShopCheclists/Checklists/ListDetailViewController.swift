@@ -8,16 +8,19 @@ protocol ListDetailViewControllerDelegate: class {
     func listDetailViewController(controller: ListDetailViewController, didFinishEditingChecklist checklist: Checklist)
 }
 
-class ListDetailViewController: UITableViewController, UITextFieldDelegate, IconPickerViewControllerDelegate {
+class ListDetailViewController: UITableViewController, UITextFieldDelegate, IconPickerViewControllerDelegate, TypePickerViewControllerDelegate {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var typeNameLabel: UILabel!
+  
 
     weak var delegate: ListDetailViewControllerDelegate?
 
     var checklistToEdit: Checklist?
     var iconName = "Folder"
+    var typeName = "Checklist"
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,7 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
         }
 
         iconImageView.image = UIImage(named: iconName)
+        typeNameLabel.text = typeName
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -53,11 +57,12 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
     }
 
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        if indexPath.section == 1 {
-            return indexPath
-        } else {
-            return nil
-        }
+//        if indexPath.section == 1 {
+//            return indexPath
+//        } else {
+//            return nil
+//        }
+        return indexPath
     }
 
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
@@ -72,15 +77,24 @@ class ListDetailViewController: UITableViewController, UITextFieldDelegate, Icon
             let controller = segue.destinationViewController as! IconPickerViewController
             controller.delegate = self
         } else if segue.identifier == "PickType" {
-            
+            let controller = segue.destinationViewController as! TypePickerViewController
+            controller.delegate = self
         }
     }
 
     func iconPicker(picker: IconPickerViewController, didPickIcon iconName: String) {
         self.iconName = iconName
-        iconImageView.image = UIImage(named: iconName)
-        navigationController?.popViewControllerAnimated(true)
+        self.iconImageView.image = UIImage(named: iconName)
+        self.navigationController?.popViewControllerAnimated(true)
     }
+    
+    func typePicker(picker: TypePickerViewController, didPickType typeName: String) {
+        print("typeName: \(typeName)")
+        self.typeName = typeName
+        self.typeNameLabel.text = typeName
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
 
 
 }
