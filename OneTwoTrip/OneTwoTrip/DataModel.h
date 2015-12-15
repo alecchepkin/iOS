@@ -13,10 +13,14 @@
 @property (nonatomic, strong) NSString* outputFile;
 @property (nonatomic, strong) NSMutableArray* symbols;
 @property (nonatomic, strong) NSMutableString* string;
+
 @property (nonatomic, strong) NSMutableString* content;
+@property (nonatomic, strong) NSMutableString* output;
+
 @property (nonatomic) NSUInteger m;
 @property (nonatomic) NSUInteger n;
 
 - (void) setSymbolsFromInputFile;
-- (NSString *) makeOutput;
+- (void) makeOutput;
+- (void) writeOutput;
 @end
