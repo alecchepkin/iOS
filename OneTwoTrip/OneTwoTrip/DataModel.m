@@ -67,7 +67,7 @@
 
 
 
-- (NSString *)makeOutput{
+- (void) makeOutput{
     NSMutableString * output = [NSMutableString string];
     
     NSUInteger stringLength = [self.string length];
@@ -84,9 +84,8 @@
         }
 
     }
+    self.output = output;
     
-    [output writeToFile:self.outputFile atomically:NO encoding:NSStringEncodingConversionAllowLossy error:nil];
-    return output;
 }
 
 - (Symbol*) findSymbol: (char) ch{
@@ -97,5 +96,9 @@
         }
     }
     return nil;
+}
+
+- (void) writeOutput {
+    [self.output writeToFile:self.outputFile atomically:NO encoding:NSStringEncodingConversionAllowLossy error:nil];
 }
 @end

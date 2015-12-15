@@ -20,8 +20,9 @@ int main(int argc, const char * argv[]) {
         dataModel.outputFile = @"/Users/legr/Developer/iOS Testing/OneTwoTrip/OneTwoTrip/output.txt";
         [dataModel setSymbolsFromInputFile];
         dataModel.string = [NSMutableString stringWithString:@"OneTwoTrip"];
-        NSString* output = [dataModel makeOutput];
-        NSLog(@"Output: %@", output);
+        [dataModel makeOutput];
+        [dataModel writeOutput];
+        NSLog(@"Output: %@", dataModel.output);
 
     }
     return 0;
