@@ -1,0 +1,30 @@
+//
+//  DataModel.h
+//  OneTwoTrip
+//
+//  Created by Oleg Chepkin on 11/12/15.
+//  Copyright © 2015 Oleg Chepkin. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface DataModel : NSObject
+<<<<<<< HEAD
+@property (nonatomic, strong) NSMutableArray* symbols;
+=======
+@property (nonatomic, strong) NSString* inputFile;
+@property (nonatomic, strong) NSString* outputFile;
+@property (nonatomic, strong) NSMutableArray* symbols;
+@property (nonatomic, strong) NSMutableString* string;
+
+@property (nonatomic, strong) NSMutableString* content;
+@property (nonatomic, strong) NSMutableString* output;
+
+@property (nonatomic) NSUInteger m;
+@property (nonatomic) NSUInteger n;
+
+- (void) setSymbolsFromInputFile;
+- (void) makeOutput;
+- (void) writeOutput;
+>>>>>>> 2fda0e5c6d1e5f61e074ea129dda8b2d486eed7b
+@end

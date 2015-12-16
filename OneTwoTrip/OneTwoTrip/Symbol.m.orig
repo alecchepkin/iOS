@@ -1,0 +1,67 @@
+//
+//  Symbol.m
+//  OneTwoTrip
+//
+//  Created by Oleg Chepkin on 11/12/15.
+//  Copyright © 2015 Oleg Chepkin. All rights reserved.
+//
+
+#import "Symbol.h"
+<<<<<<< HEAD
+=======
+#import <ctype.h>
+>>>>>>> 2fda0e5c6d1e5f61e074ea129dda8b2d486eed7b
+
+@implementation Symbol
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.isUsed = NO;
+    }
+    return self;
+}
+
+<<<<<<< HEAD
+- (instancetype)initWithName:(NSString*)name
+=======
+- (instancetype)initWithName:(char) name
+>>>>>>> 2fda0e5c6d1e5f61e074ea129dda8b2d486eed7b
+                 andPosition:(struct Position)position
+{
+    self = [self init];
+    if (self) {
+        self.name = name;
+        self.position = position;
+    }
+    return self;
+}
+
+
+- (NSString *)description
+{
+
+<<<<<<< HEAD
+    return [NSString stringWithFormat:@"%@:(%d,%d) - %hhd\n", _name, _position.i, _position.j, _isUsed];
+=======
+    return [NSString stringWithFormat:@"%c - (%d,%d)\n", _name, _position.i, _position.j];
+}
+
+- (BOOL)suitWithCharAndNotUsed:(char)ch {
+
+    
+    if (self.isUsed == NO) {
+        char lowerChar = tolower(ch);
+        char lowerName = tolower(self.name);
+        
+        return (lowerChar == lowerName);
+    }
+    return NO;
+}
+
+- (void) markAsUsed{
+    self.isUsed = YES;
+>>>>>>> 2fda0e5c6d1e5f61e074ea129dda8b2d486eed7b
+}
+@end

@@ -1,0 +1,33 @@
+//
+//  Symbol.h
+//  OneTwoTrip
+//
+//  Created by Oleg Chepkin on 11/12/15.
+//  Copyright © 2015 Oleg Chepkin. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+struct Position {
+    int i;
+    int j;
+};
+
+@interface Symbol : NSObject
+<<<<<<< HEAD
+@property (nonatomic, strong) NSString* name;
+@property (nonatomic) BOOL isUsed;
+@property (nonatomic) struct Position position;
+
+- (instancetype)initWithName:(NSString*)name andPosition:(struct Position)position;
+
+=======
+@property (nonatomic) char name;
+@property (nonatomic) BOOL isUsed;
+@property (nonatomic) struct Position position;
+
+- (instancetype)initWithName:(char)name andPosition:(struct Position)position;
+- (BOOL) suitWithCharAndNotUsed: (char) ch;
+- (void) markAsUsed;
+>>>>>>> 2fda0e5c6d1e5f61e074ea129dda8b2d486eed7b
+@end
