@@ -14,10 +14,11 @@ struct Position {
 };
 
 @interface Symbol : NSObject
-@property (nonatomic, strong) NSString* name;
+@property (nonatomic) char name;
 @property (nonatomic) BOOL isUsed;
 @property (nonatomic) struct Position position;
 
-- (instancetype)initWithName:(NSString*)name andPosition:(struct Position)position;
-
+- (instancetype)initWithName:(char)name andPosition:(struct Position)position;
+- (BOOL) suitWithCharAndNotUsed: (char) ch;
+- (void) markAsUsed;
 @end

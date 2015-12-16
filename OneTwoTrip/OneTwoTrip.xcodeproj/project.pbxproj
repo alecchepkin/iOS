@@ -10,17 +10,19 @@
 		14F240821C1AE1F200B5C40F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F240811C1AE1F200B5C40F /* main.m */; };
 		14F2408A1C1AE29100B5C40F /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F240891C1AE29100B5C40F /* DataModel.m */; };
 		14F2408D1C1AE2B100B5C40F /* Symbol.m in Sources */ = {isa = PBXBuildFile; fileRef = 14F2408C1C1AE2B100B5C40F /* Symbol.m */; };
+		1BAFAA181C1C2CC700BADE89 /* input.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1BAFAA171C1C2BA900BADE89 /* input.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		14F2407C1C1AE1F200B5C40F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 16;
 			files = (
+				1BAFAA181C1C2CC700BADE89 /* input.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -31,7 +33,7 @@
 		14F240891C1AE29100B5C40F /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 		14F2408B1C1AE2B100B5C40F /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
 		14F2408C1C1AE2B100B5C40F /* Symbol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Symbol.m; sourceTree = "<group>"; };
-		14F2408E1C1AF97000B5C40F /* file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = file.txt; sourceTree = "<group>"; };
+		1BAFAA171C1C2BA900BADE89 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,7 @@
 				14F240891C1AE29100B5C40F /* DataModel.m */,
 				14F2408B1C1AE2B100B5C40F /* Symbol.h */,
 				14F2408C1C1AE2B100B5C40F /* Symbol.m */,
-				14F2408E1C1AF97000B5C40F /* file.txt */,
+				1BAFAA171C1C2BA900BADE89 /* input.txt */,
 			);
 			path = OneTwoTrip;
 			sourceTree = "<group>";
@@ -251,6 +253,7 @@
 				14F240871C1AE1F200B5C40F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

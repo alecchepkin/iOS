@@ -10,31 +10,20 @@
 #import "DataModel.h"
 #import "Symbol.h"
 
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-
+        
         DataModel* dataModel = [[DataModel alloc] init];
-        // The source text file is named "Example.txt". Written with UTF-8 encoding.
-        NSString *path = @"/Volumes/Distrib/Developer/iOS/iOS Testing/OneTwoTrip/OneTwoTrip/file.txt";
-        
-        NSLog(@"path%@", path);
-        NSError* error = nil;
-        NSString* content = [NSString stringWithContentsOfFile:path
-                                                      encoding:NSUTF8StringEncoding
-                                                         error:&error];
-        NSLog(@"content%@", content);
-        if(error) { // If error object was instantiated, handle it.
-            NSLog(@"ERROR while loading from file: %@", error);
-            // …
-        }//        struct Position position;
-//        position.i = 1;
-//        position.j = 2;
-//        Symbol* symbol = [[Symbol alloc] initWithName:@"h" andPosition:position];
-//        [dataModel.symbols addObject:symbol];
-//
-        
-        
-        NSLog(@"dataModel%@", dataModel);
+        dataModel.inputFile = @"/Users/legr/Developer/iOS Testing/OneTwoTrip/OneTwoTrip/input.txt";
+        dataModel.outputFile = @"/Users/legr/Developer/iOS Testing/OneTwoTrip/OneTwoTrip/output.txt";
+        [dataModel setSymbolsFromInputFile];
+        dataModel.string = [NSMutableString stringWithString:@"OneTwoTrip"];
+        [dataModel makeOutput];
+        [dataModel writeOutput];
+        NSLog(@"Output: %@", dataModel.output);
+
     }
     return 0;
 }

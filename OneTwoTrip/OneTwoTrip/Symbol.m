@@ -7,6 +7,7 @@
 //
 
 #import "Symbol.h"
+#import <ctype.h>
 
 @implementation Symbol
 
@@ -19,7 +20,7 @@
     return self;
 }
 
-- (instancetype)initWithName:(NSString*)name
+- (instancetype)initWithName:(char) name
                  andPosition:(struct Position)position
 {
     self = [self init];
@@ -34,6 +35,22 @@
 - (NSString *)description
 {
 
-    return [NSString stringWithFormat:@"%@:(%d,%d) - %hhd\n", _name, _position.i, _position.j, _isUsed];
+    return [NSString stringWithFormat:@"%c - (%d,%d)\n", _name, _position.i, _position.j];
+}
+
+- (BOOL)suitWithCharAndNotUsed:(char)ch {
+
+    
+    if (self.isUsed == NO) {
+        char lowerChar = tolower(ch);
+        char lowerName = tolower(self.name);
+        
+        return (lowerChar == lowerName);
+    }
+    return NO;
+}
+
+- (void) markAsUsed{
+    self.isUsed = YES;
 }
 @end
